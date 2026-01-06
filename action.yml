@@ -1,16 +1,25 @@
-name: 'Get Minecraft Forge Version'
-description: 'Finds the latest Minecraft Forge version for a Minecraft version'
+name: 'Get Forge Version'
+description: 'Finds the latest Forge version matching a Minecraft version'
+author: Twelve Iterations
+
+branding:
+  icon: heart
+  color: red
+
 inputs:
   minecraftVersion:
-    description: 'The Minecraft version you want to get the latest Forge version for'
+    description: 'Minecraft version to search for'
     required: true
+
   channel:
-    description: "The release channel, either 'latest' or 'recommended'"
+    description: 'Channel to search in (either "latest" or "recommended")'
     required: false
-    default: latest
+    default: 'latest'
+
 outputs:
   version:
-    description: 'The latest Forge version for the given Minecraft version and release channel'
+    description: 'The latest Forge version matching the search criteria'
+
 runs:
-  using: 'node16'
-  main: 'dist/index.js'
+  using: node20
+  main: dist/index.js
