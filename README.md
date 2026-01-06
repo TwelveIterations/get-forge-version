@@ -11,7 +11,8 @@
 ```yaml
 uses: TwelveIterations/get-forge-version@v1
 with:
-  version: '21.11.*'
+  version: '1.21.11'
+  channel: 'latest'
 ```
 
 ## Development
